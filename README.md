@@ -4,17 +4,17 @@ Adding aws cognito implementation
 
 Add the AWS SDK for Java and the Spring Security dependencies to your project's build file. You can do this by adding the following lines to your Gradle build file:
 --
-`<dependencies>`
-    `<dependency>`
-        `<groupId>com.amazonaws</groupId>`
-        `<artifactId>aws-java-sdk-cognito</artifactId>`
-        `<version>1.12.17</version>`
-    `</dependency>`
-    `<dependency>`
-        `<groupId>org.springframework.boot</groupId>`
-        `<artifactId>spring-boot-starter-security</artifactId>`
-    `</dependency>`
-`</dependencies>`
+`<dependencies>
+    <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-java-sdk-cognito</artifactId>
+        <version>1.12.17</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+</dependencies>`
 
 
 Configure your Cognito User Pool and create a new app client. Note down the User Pool ID, App Client ID, and App Client Secret.
@@ -67,6 +67,6 @@ This configuration enables Cognito as the authentication provider and configures
 
 Add the Cognito configuration properties to your application.properties file:
 
-cognito.pool.id=<your-user-pool-id>
+`cognito.pool.id=<your-user-pool-id>
 cognito.client.id=<your-app-client-id>
-cognito.client.secret=<your-app-client-secret>
+cognito.client.secret=<your-app-client-secret>`
